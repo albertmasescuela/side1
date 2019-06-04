@@ -1,0 +1,18 @@
+<div #backdrop (click)="onBackdropClick($event)"></div>
+<div #flyout>
+  <div
+    class="close-btn-container"
+    [ngClass]="showCloseButton && open ? '' : 'hidden'"
+  >
+    <div class="close-btn" (click)="onCloseButtonClick($event)"></div>
+  </div>
+  <div
+    class="open-btn-container"
+    [ngClass]="showCloseButton && !open ? '' : 'hidden'"
+  >
+    <div class="open-btn" (click)="onShowButtonClick($event)"></div>
+  </div>
+  <div class="flyout-content">
+    <ng-content></ng-content>
+  </div>
+</div>
