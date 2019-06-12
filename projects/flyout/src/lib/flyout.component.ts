@@ -170,20 +170,58 @@ export class FlyoutComponent implements OnInit, OnChanges {
    *
    * @memberof FlyoutComponent
    */
-  _updateFlyoutTransform() {
-    if (this.open) {
-      this.flyout.nativeElement.style.transform = 'translate3d(100px, 0, 0)';
-    } else {
-      const element = this.flyout.nativeElement;
-      const dimension = {
-        left: parseInt(element.style.left, 10) || 0,
-        right: parseInt(element.style.right, 10) || 0,
-        top: parseInt(element.style.top, 10) || 0,
-        bottom: parseInt(element.style.bottom, 10) || 0,
-        width: element.offsetWidth || 0,
-        height: element.offsetHeight || 0
-      };
+  // _updateFlyoutTransform() {
+  //   if (this.open) {
+  //     this.flyout.nativeElement.style.transform = 'translate3d(100px, 0, 0)';
+  //   } else {
+  //     const element = this.flyout.nativeElement;
+  //     const dimension = {
+  //       left: parseInt(element.style.left, 10) || 0,
+  //       right: parseInt(element.style.right, 10) || 0,
+  //       top: parseInt(element.style.top, 10) || 0,
+  //       bottom: parseInt(element.style.bottom, 10) || 0,
+  //       width: element.offsetWidth || 0,
+  //       height: element.offsetHeight || 0
+  //     };
 
+  //     switch (this.position) {
+  //       case 'top':
+  //         this.flyout.nativeElement.style.transform =
+  //           'translate3d(0, -' + dimension.height + 'px, 0)';
+  //         break;
+  //       case 'bottom':
+  //         this.flyout.nativeElement.style.transform =
+  //           'translate3d(0, ' + dimension.height + 'px, 0)';
+  //         break;
+  //       case 'left':
+  //         // this.flyout.nativeElement.style.transform =
+  //         //   'translate3d(-' + (dimension.width - 50) + 'px, 0, 0)';
+  //         this.flyout.nativeElement.style.transform =
+  //           'translate3d(-' + 200 + 'px, 0, 0)';
+  //         break;
+  //       default:
+  //         this.flyout.nativeElement.style.transform =
+  //           'translate3d(' + dimension.width + 'px, 0, 0)';
+  //         break;
+  //     }
+  //   }
+  // }
+  _updateFlyoutTransform() {
+    const element = this.flyout.nativeElement;
+    const dimension = {
+      left: parseInt(element.style.left, 10) || 0,
+      right: parseInt(element.style.right, 10) || 0,
+      top: parseInt(element.style.top, 10) || 0,
+      bottom: parseInt(element.style.bottom, 10) || 0,
+      width: element.offsetWidth || 0,
+      height: element.offsetHeight || 0
+    };
+    if (this.open) {
+      this.flyout.nativeElement.style.transform =
+        'translate3d(' +
+        (dimension.width - (dimension.width - 100)) +
+        'px, 0, 0)';
+    } else {
       switch (this.position) {
         case 'top':
           this.flyout.nativeElement.style.transform =
@@ -194,10 +232,8 @@ export class FlyoutComponent implements OnInit, OnChanges {
             'translate3d(0, ' + dimension.height + 'px, 0)';
           break;
         case 'left':
-          // this.flyout.nativeElement.style.transform =
-          //   'translate3d(-' + (dimension.width - 50) + 'px, 0, 0)';
           this.flyout.nativeElement.style.transform =
-            'translate3d(-' + 200 + 'px, 0, 0)';
+            'translate3d(-' + dimension.width + 'px, 0, 0)';
           break;
         default:
           this.flyout.nativeElement.style.transform =
