@@ -3,7 +3,20 @@
   (click)="onBackdropClick($event)"
   style="background-color: blueviolet;"
 ></div>
-<div #left class="fixFlyout left">HOLA</div>
+<div #left class="fixFlyout left">
+  <div
+    class="close-btn-container"
+    [ngClass]="showCloseButton && open ? '' : 'hidden'"
+  >
+    <div class="close-btn" (click)="onCloseButtonClick($event)"></div>
+  </div>
+  <div
+    class="open-btn-container"
+    [ngClass]="showCloseButton && !open ? '' : 'hidden'"
+  >
+    <div class="open-btn" (click)="onShowButtonClick($event)"></div>
+  </div>
+</div>
 <div #flyout>
   <div
     class="close-btn-container"
