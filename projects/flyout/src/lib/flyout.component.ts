@@ -172,7 +172,7 @@ export class FlyoutComponent implements OnInit, OnChanges {
    */
   _updateFlyoutTransform() {
     if (this.open) {
-      this.flyout.nativeElement.style.transform = 'translate3d(0, 0, 0)';
+      this.flyout.nativeElement.style.transform = 'translate3d(100px, 0, 0)';
     } else {
       const element = this.flyout.nativeElement;
       const dimension = {
@@ -194,8 +194,10 @@ export class FlyoutComponent implements OnInit, OnChanges {
             'translate3d(0, ' + dimension.height + 'px, 0)';
           break;
         case 'left':
+          // this.flyout.nativeElement.style.transform =
+          //   'translate3d(-' + (dimension.width - 50) + 'px, 0, 0)';
           this.flyout.nativeElement.style.transform =
-            'translate3d(-' + (dimension.width - 50) + 'px, 0, 0)';
+            'translate3d(-' + 200 + 'px, 0, 0)';
           break;
         default:
           this.flyout.nativeElement.style.transform =

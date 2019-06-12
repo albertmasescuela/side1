@@ -28,7 +28,7 @@ ul li:first-child {
 .main-container {
   width: 100%;
   height: 100vh;
-  display: flex;
+  /* display: flex; */
 }
 
 .main-container .wrapper {

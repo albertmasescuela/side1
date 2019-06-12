@@ -1,4 +1,9 @@
-<div #backdrop (click)="onBackdropClick($event)"></div>
+<div
+  #backdrop
+  (click)="onBackdropClick($event)"
+  style="background-color: blueviolet;"
+></div>
+<div #left class="fixFlyout left">HOLA</div>
 <div #flyout>
   <div
     class="close-btn-container"

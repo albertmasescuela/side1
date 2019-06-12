@@ -1,6 +1,11 @@
-<ngx-flyout [(open)]="open" [position]="position" [showCloseButton]="showCloseButton" [showBackdrop]="showBackdrop" [hideOnBackdropClick]="hideOnBackdropClick">
-  <div class="cover-picture">
-  </div>
+<ngx-flyout
+  [(open)]="open"
+  [position]="position"
+  [showCloseButton]="showCloseButton"
+  [showBackdrop]="showBackdrop"
+  [hideOnBackdropClick]="hideOnBackdropClick"
+>
+  <div class="cover-picture"></div>
   <div class="menu-container">
     <ul>
       <li>Menu 1</li>
@@ -17,20 +22,73 @@
     <h1 style="text-align: center;">ngx-flyout</h1>
     <br />
     <ul>
-      <li (click)="open = !open">
-        <strong>open:</strong> {{open}}
-      </li>
+      <li (click)="open = !open"><strong>open:</strong> {{ open }}</li>
       <li (click)="togglePosition()">
-        <strong>position:</strong> {{position}}
+        <strong>position:</strong> {{ position }}
       </li>
       <li (click)="showCloseButton = !showCloseButton">
-        <strong>showCloseButton:</strong> {{showCloseButton}}
+        <strong>showCloseButton:</strong> {{ showCloseButton }}
       </li>
       <li (click)="showBackdrop = !showBackdrop">
-        <strong>showBackdrop:</strong> {{showBackdrop}}
+        <strong>showBackdrop:</strong> {{ showBackdrop }}
       </li>
       <li (click)="hideOnBackdropClick = !hideOnBackdropClick">
-        <strong>hideOnBackdropClick:</strong> {{hideOnBackdropClick}}
+        <strong>hideOnBackdropClick:</strong> {{ hideOnBackdropClick }}
+      </li>
+    </ul>
+    <br />
+    <div style="text-align: center;">
+      <a href="http://codetonics.com/ngx-flyout">DOCUMENTATION</a>
+      &nbsp;&nbsp;&nbsp;
+      <a href="https://www.npmjs.com/package/ngx-flyout">DOWNLOAD</a>
+      &nbsp;&nbsp;&nbsp;
+      <a href="https://github.com/codetonics/ngx-flyout/">GITHUB</a>
+    </div>
+  </div>
+  <div class="wrapper">
+    <h1 style="text-align: center;">ngx-flyout</h1>
+    <br />
+    <ul>
+      <li (click)="open = !open"><strong>open:</strong> {{ open }}</li>
+      <li (click)="togglePosition()">
+        <strong>position:</strong> {{ position }}
+      </li>
+      <li (click)="showCloseButton = !showCloseButton">
+        <strong>showCloseButton:</strong> {{ showCloseButton }}
+      </li>
+      <li (click)="showBackdrop = !showBackdrop">
+        <strong>showBackdrop:</strong> {{ showBackdrop }}
+      </li>
+      <li (click)="hideOnBackdropClick = !hideOnBackdropClick">
+        <strong>hideOnBackdropClick:</strong> {{ hideOnBackdropClick }}
+      </li>
+    </ul>
+    <br />
+    <div style="text-align: center;">
+      <a href="http://codetonics.com/ngx-flyout">DOCUMENTATION</a>
+      &nbsp;&nbsp;&nbsp;
+      <a href="https://www.npmjs.com/package/ngx-flyout">DOWNLOAD</a>
+      &nbsp;&nbsp;&nbsp;
+      <a href="https://github.com/codetonics/ngx-flyout/">GITHUB</a>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <h1 style="text-align: center;">ngx-flyout</h1>
+    <br />
+    <ul>
+      <li (click)="open = !open"><strong>open:</strong> {{ open }}</li>
+      <li (click)="togglePosition()">
+        <strong>position:</strong> {{ position }}
+      </li>
+      <li (click)="showCloseButton = !showCloseButton">
+        <strong>showCloseButton:</strong> {{ showCloseButton }}
+      </li>
+      <li (click)="showBackdrop = !showBackdrop">
+        <strong>showBackdrop:</strong> {{ showBackdrop }}
+      </li>
+      <li (click)="hideOnBackdropClick = !hideOnBackdropClick">
+        <strong>hideOnBackdropClick:</strong> {{ hideOnBackdropClick }}
       </li>
     </ul>
     <br />

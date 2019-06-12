@@ -12,6 +12,25 @@
   }
 }
 
+.fixFlyout {
+  position: fixed;
+  overflow: auto;
+  background: #cd4433;
+  backface-visibility: visible;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  will-change: transform;
+  z-index: 999;
+  &.left {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 100vh;
+    max-width: 100%;
+  }
+}
+
 .flyout {
   position: fixed;
   overflow: auto;
@@ -20,6 +39,7 @@
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   will-change: transform;
+  z-index: 998;
   &.left {
     top: 0;
     bottom: 0;
